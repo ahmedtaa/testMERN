@@ -8,9 +8,7 @@ const _routes: Array<[string, Router]> = [
 ];
 
 export const routes = (app: Application): void => {
-  _routes.map(route => {
-    const [url, router] = route;
-
-    return app.use(url, router);
+  _routes.forEach(([url, router]) => {
+    app.use(url, router);
   });
 };
