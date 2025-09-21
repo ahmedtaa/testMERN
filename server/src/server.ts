@@ -35,7 +35,7 @@ app.use(morgan("common"));
 // Cors
 app.use(
   cors({
-    origin: [CLIENT_BASE_URL, "*"],
+    origin: [CLIENT_BASE_URL, "http://localhost:5173"],
     credentials: true
   })
 );
